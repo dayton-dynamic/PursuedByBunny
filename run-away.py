@@ -2,7 +2,6 @@ import math
 import random
 
 import ppb
-from ppb.features.animation import Animation
 import ppb.events as events
 
 # bush: https://opengameart.org/content/simple-bush-2d
@@ -24,7 +23,7 @@ def could_be_anywhere():
 
 
 
-class Knight(ppb.BaseSprite):
+class Knight(ppb.Sprite):
     speed = 1.2 
     MEANDER_SPEED = 0.01
     dead = False
@@ -67,7 +66,7 @@ class Knight(ppb.BaseSprite):
 
 
 
-class Shrubbery(ppb.BaseSprite):
+class Shrubbery(ppb.Sprite):
 
     def __init__(self, *arg, **kwarg):
         result = super().__init__(*arg, **kwarg)
@@ -103,7 +102,7 @@ class Player(Knight):
         pass  
 
 
-class Rabbit(ppb.BaseSprite):
+class Rabbit(ppb.Sprite):
     target = None 
     speed = 2
     position = (-3, 0)
